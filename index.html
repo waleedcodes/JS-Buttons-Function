@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buttons Function</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 20px;
+      margin: 10px;
+    }
+  </style>
+  <body>
+    <button id="Default">Default Button</button>
+    <button id="button1">red</button>
+    <button id="button2">green</button>
+    <button id="button3">blue</button>
+  </body>
+
+  <script>
+    const button1 = document.getElementById("button1");
+    const button2 = document.getElementById("button2");
+    const button3 = document.getElementById("button3");
+    const Default = document.getElementById("Default");
+    const changeButtonColor = (color, text, textColor) => {
+      Default.style.backgroundColor = color;
+      Default.innerHTML = text;
+      Default.style.color = textColor;
+    };
+
+    button1.addEventListener("click", () => {
+      changeButtonColor("red", "red", "white");
+    });
+
+    button2.addEventListener("click", () => {
+      changeButtonColor("green", "green", "white");
+    });
+
+    button3.addEventListener("click", () => {
+      changeButtonColor("blue", "blue", "white");
+    });
+
+    Default.addEventListener("click", () => {
+      changeButtonColor("white", "Default Button", "black");
+    });
+  </script>
+</html>
